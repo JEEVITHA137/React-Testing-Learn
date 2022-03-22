@@ -1,8 +1,6 @@
 import React,{Component} from 'react';
 import Input from  './input';
 import ButtonInput from  './button';
-import { Button } from 'react-bootstrap';
-
 class Calculator extends Component{
   state = {
     num1 : 0,
