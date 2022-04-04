@@ -75,12 +75,12 @@ class Calculator extends Component{
   })
   }
 
-  input1Change = (e) => {
-    this.setState({num1: e.target.value})
+  input1Change = (value) => {
+    this.setState({num1:value})
   }
 
-  input2Change = (e) => {
-    this.setState({num2: e.target.value})
+  input2Change = (value) => {
+    this.setState({num2: value})
   }
 
   currentSymbolChange = ( value ) => {
@@ -98,13 +98,13 @@ class Calculator extends Component{
           <label>Result: {res}</label><br></br>
           {
             mathSymbols.map((value) => 
-              <ButtonInput symbol={value} currentSymbol={currentSymbol} currentSymbolChange={this.currentSymbolChange}/>
+              <ButtonInput key={value} symbol={value} currentSymbol={currentSymbol} currentSymbolChange={this.currentSymbolChange}/>
             )
           }
           <ButtonInput symbol="="  answer={this.answer}/>
           <ButtonInput symbol="Clear" clear={this.clear}/>
           {
-            this.state.error ? <div className="error">{this.state.error}</div> : <></>
+            this.state.error ? <div id="error">{this.state.error}</div> : <></>
           }
       </div>
     );
