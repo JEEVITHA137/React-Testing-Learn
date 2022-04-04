@@ -6,11 +6,11 @@ export default function Input({label, value, inputChange}) {
         <InputGroup className="mb-3 w-25">
             <InputGroup.Text id="basic-addon1">{label}</InputGroup.Text>
             <FormControl
-            placeholder="Enter Input"
-            aria-label={label}
-            aria-describedby="basic-addon1"
-            onChange={(e)=> inputChange(e)}
-            value={value || ''}
+              placeholder="Enter Input"
+              aria-label={label}
+              aria-describedby="basic-addon1"
+              onChange={(e)=> inputChange(e.target.value)}
+              value={value || ''}
             />
         </InputGroup>
     </div>
