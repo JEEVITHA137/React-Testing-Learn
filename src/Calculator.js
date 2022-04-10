@@ -104,7 +104,7 @@ class Calculator extends Component{
           <ButtonInput symbol="="  answer={this.answer}/>
           <ButtonInput symbol="Clear" clear={this.clear}/>
           {
-            this.state.error ? <div id="error">{this.state.error}</div> : <></>
+            this.state.error ? <div id="error" data-testid="error">{this.state.error}</div> : <></>
           }
       </div>
     );

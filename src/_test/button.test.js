@@ -16,7 +16,7 @@ describe('Button', () => {
 
   test('Check Function Called', () => {
     const value = '+';
-    const currentSymbol = ''
+    const currentSymbol = '';
     render(<ButtonInput key={value} symbol={value} currentSymbol={currentSymbol} currentSymbolChange={mockTest}/>);
     const buttonElement = screen.getByRole("button", { name: value });
     expect(buttonElement).toBeInTheDocument();
